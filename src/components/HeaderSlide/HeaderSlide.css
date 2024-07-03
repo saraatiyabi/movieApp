@@ -1,0 +1,90 @@
+.movie-container {
+    position: relative;
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-background:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.movie-details {
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.movie-title {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.movie-desc {
+    text-align: justify;
+    margin: 15px 0;
+    font-size: 12px;
+    width: 600px;
+    margin-right: 50px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin: 20px 0;
+}
+
+.btns .watch-btn,
+.trailer-btn {
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns .trailer-btn:hover,
+.watch-btn:hover {
+    transform: scale(1.08);
+    transition: all 0.2s linear;
+}
+
+.btns>.watch-btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+}
+
+.btns>button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transform: all 0.2s linear;
+}
+
+.btns>button:hover {
+    background-color: white;
+    color: red;
+}
+
+.movie-img {
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(1);
+    transition: all 1s ease;
+}

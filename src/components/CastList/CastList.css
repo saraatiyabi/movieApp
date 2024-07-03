@@ -1,0 +1,12 @@
+.cast{
+    display: flex;
+    flex-direction: column;
+}
+.cast-img{
+    width: 100px;
+}
+
+.cast-name{
+    font-size: 12px;
+    margin: 10px 0;
+}

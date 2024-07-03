@@ -1,0 +1,75 @@
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.movie-info {
+    position: relative;
+    height: calc((100vh - 60px));
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    /* overflow: hidden; */
+}
+
+.movie-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-info::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+}
+
+.movie-info-img {
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.movie-info-genres {
+    color: white;
+}
+
+.movie-info-desc {
+    width: 600px;
+    font-size: 13px;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.movie-info-genres {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.movie-info-genres .genre {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.video-title {
+    color: white;
+    font-family: "Pauta One";
+    font-size: 20px;
+}

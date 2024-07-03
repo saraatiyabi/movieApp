@@ -1,0 +1,16 @@
+.page-header {
+    width: 100%;
+    height: 120px;
+    background-image: url("footer-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header .category {
+    color: white;
+    font-size: 18px;
+}

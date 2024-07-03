@@ -1,0 +1,45 @@
+.movies {
+    width: 100%;
+}
+
+.page-content {
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    column-gap: 0.1rem;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background-color: black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 300px;
+    font-size: 15px;
+    color: white;
+}
+
+.search-bar button {
+    border: none;
+    padding: 5px 15px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.load-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more-btn button {
+    font-family: "Baloo Tamma 2";
+    font-weight: bold;
+}
