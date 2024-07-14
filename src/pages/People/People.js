@@ -18,17 +18,19 @@ export default function People() {
             method: 'GET',
             headers: {
                 accept: 'application/json',
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWViNTg4MjJjMGVhOWM1ZGM4NDY4OWUzODI3MDY1NiIsInN1YiI6IjY1NGNhMTFhMjkzODM1MDBmZTBlZDk0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.718YCgxBiTKLTQvuVR4Po-9OpwC9uteSGM7NuS1-Djw'
+                Authorization: `Bearer ${process.env.PRIVATE_KEY}`
             }
         };
 
         fetch(`https://api.themoviedb.org/3/person/popular?language=en-US&page=${page}`, options)
             .then(response => response.json())
             .then(response => {
+                console.log(response)
                 setPeople(response.results)
                 setIsLoading(false)
             })
             .catch(err => console.error(err));
+
 
         setIsLoading(true)
     }, [page])
@@ -43,7 +45,7 @@ export default function People() {
                             <TopSection title="Popular People" />
                             <div className='row mt-2'>
                                 {
-                                    people.map(person => (
+                                    people?.map(person => (
                                         <PersonCard {...person} />
                                     ))
                                 }

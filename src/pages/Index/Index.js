@@ -44,7 +44,7 @@ export default function Index() {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWViNTg4MjJjMGVhOWM1ZGM4NDY4OWUzODI3MDY1NiIsInN1YiI6IjY1NGNhMTFhMjkzODM1MDBmZTBlZDk0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.718YCgxBiTKLTQvuVR4Po-9OpwC9uteSGM7NuS1-Djw'
+        Authorization: `Bearer ${process.env.PRIVATE_KEY}`
       }
     };
 
@@ -59,7 +59,7 @@ export default function Index() {
 
   useEffect(() => {
     setIsTrailerLoading(true)
-  },[showTrailerModal])
+  }, [showTrailerModal])
 
   return (
     <div style={{ backgroundColor: "black" }}>
