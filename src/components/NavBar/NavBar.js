@@ -56,7 +56,7 @@ export default function NavBar() {
             </li>
             <li className="main-menu-item">
               <Link
-                to="/series"
+                to="/"
                 className={
                   pathname === "/series"
                     ? "main-menu-link active"
@@ -92,7 +92,7 @@ export default function NavBar() {
               <Link
                 to="/"
                 className={
-                  pathname === "/series"
+                  pathname === "/people"
                     ? "main-menu-link active"
                     : "main-menu-link"
                 }
