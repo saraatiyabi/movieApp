@@ -15,7 +15,7 @@ export default function CastList({ movieId }) {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${process.env.PRIVATE_KEY}`, // Fixed env var name
+        Authorization: `Bearer ${process.env.REACT_API_KEY}`, // Fixed env var name
       },
     };
 
