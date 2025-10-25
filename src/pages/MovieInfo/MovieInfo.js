@@ -22,15 +22,15 @@ export default function MovieInfo() {
   const [trailerKey, setTrailerKey] = useState("");
   const [similar, setSimilar] = useState([]);
 
-  const API_KEY = process.env.REACT_API_KEY;
+  const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
   // Helper: get title
   const getTitle = (data) => data.title || data.name || "Untitled";
 
   // Fetch movie/TV details
   useEffect(() => {
-    console.log(mediaId, mediaType, process.env.REACT_API_KEY);
-    if (!mediaId || !mediaType || process.env.REACT_API_KEY) {
+    console.log(mediaId, mediaType, process.env.REACT_APP_TMDB_API_KEY);
+    if (!mediaId || !mediaType || process.env.REACT_APP_TMDB_API_KEY) {
       setError("Invalid URL? Missing ID, type, or API key.");
       setIsLoading(false);
       return;
@@ -45,7 +45,7 @@ export default function MovieInfo() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${process.env.REACT_API_KEY}`,
+        Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}`,
       },
     };
 
@@ -89,7 +89,7 @@ export default function MovieInfo() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${process.env.REACT_API_KEY}`,
+        Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}`,
       },
     };
 
@@ -114,7 +114,7 @@ export default function MovieInfo() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${process.env.REACT_API_KEY}`,
+        Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}`,
       },
     };
 
